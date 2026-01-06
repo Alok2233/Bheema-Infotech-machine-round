@@ -1,4 +1,4 @@
-# 💞 MERN Dating App – Bheema Infotech Machine Test
+#  MERN Dating App – Bheema Infotech Machine Test
 
 A modern **MERN Stack Dating Application** built as part of the **Bheema Infotech MERN Intern Machine Test**.  
 It features user registration, authentication, nearby user discovery using geolocation, and a real-time chat system inspired by WhatsApp — all wrapped in a beautiful **Tailwind CSS + Framer Motion** UI.
