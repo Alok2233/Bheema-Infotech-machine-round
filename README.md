@@ -61,5 +61,89 @@ git clone https://github.com/Alok2233/Bheema-Infotech-machine-round
   }
 }
 
+📡 REST API Documentation
 
+Base URL:
+
+http://localhost:5000/api
+
+🔐 Authentication Routes — /api
+1️⃣ Register User
+
+POST /register
+
+Request Body:
+
+{
+  "name": "Alice",
+  "email": "alice@example.com",
+  "password": "123456",
+  "gender": "Female",
+  "age": 25,
+  "latitude": 12.9716,
+  "longitude": 77.5946
+}
+
+
+Response (201):
+
+{
+  "message": "User registered successfully",
+  "user": {
+    "_id": "65a7c3f...",
+    "name": "Alice",
+    "email": "alice@example.com",
+    "gender": "Female",
+    "age": 25,
+    "location": {
+      "type": "Point",
+      "coordinates": [77.5946, 12.9716]
+    }
+  }
+}
+
+2️⃣ Login User
+
+POST /login
+
+{
+  "email": "alice@example.com",
+  "password": "123456"
+}
+
+
+Response:
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": {
+    "_id": "65a7c3f...",
+    "name": "Alice",
+    "email": "alice@example.com"
+  }
+}
+
+🌍 Nearby Users — /api/nearby-users (Protected)
+
+GET /nearby-users
+
+Header:
+
+Authorization: Bearer <JWT_TOKEN>
+
+
+Response:
+
+[
+  {
+    "_id": "65a7c5f...",
+    "name": "Bob",
+    "gender": "Male",
+    "age": 27,
+    "location": {
+      "type": "Point",
+      "coordinates": [77.5900, 12.9722]
+    }
+  }
+]
 
